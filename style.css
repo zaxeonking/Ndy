@@ -1,0 +1,92 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: #111;
+  border: 2px solid #00f2ff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 380px;
+  box-shadow: 0 0 20px #00f2ff;
+  text-align: center;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #00f2ff;
+  margin: 10px auto;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.qris-button {
+  background: #00f2ff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00f2ff;
+  margin-bottom: 20px;
+}
+
+.qris-image {
+  display: none;
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid #00f2ff;
+}
+
+.payment-method {
+  background: #000;
+  border: 1px solid #00f2ff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #00f2ff;
+}
+
+.payment-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+}
+
+.copy-button {
+  background: #00f2ff;
+  color: #000;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #00f2ff;
+}
