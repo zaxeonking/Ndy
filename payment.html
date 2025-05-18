@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Metode Pembayaran</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: #111;
+      border: 2px solid #00f2ff;
+      border-radius: 20px;
+      padding: 20px;
+      width: 380px;
+      box-shadow: 0 0 20px #00f2ff;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #00f2ff;
+      margin: 10px auto;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .qris-button {
+      background: #00f2ff;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00f2ff;
+      margin-bottom: 20px;
+    }
+
+    .qris-image {
+      display: none;
+      margin-top: 10px;
+      max-width: 100%;
+      border-radius: 10px;
+      border: 2px solid #00f2ff;
+    }
+
+    .payment-method {
+      background: #000;
+      border: 1px solid #00f2ff;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #00f2ff;
+    }
+
+    .payment-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .payment-logo {
+      width: 28px;
+      height: 28px;
+      border-radius: 5px;
+    }
+
+    .copy-button {
+      background: #00f2ff;
+      color: #000;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #00f2ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://img1.pixhost.to/images/5838/600592650_yilzishop.jpg" alt="Profile" class="profile-img">
+    <h2>Metode Pembayaran</h2>
+    <button class="qris-button" onclick="toggleQRIS()">QRIS</button>
+    <img id="qrisImage" class="qris-image" src="https://img1.pixhost.to/images/5820/600060003_yilzishop.jpg" alt="QRIS">
+
+    <div class="payment-method">
+      <div class="payment-left">
+        <img src="https://l.top4top.io/p_3425ty7mq1.jpg" alt="Dana" class="payment-logo">
+        <span>Dana</span>
+      </div>
+      <button class="copy-button" data-account="085767549815">Copy</button>
+    </div>
+
+    <div class="payment-method">
+      <div class="payment-left">
+        <img src="https://h.top4top.io/p_3425bkmru1.jpg" alt="Gopay" class="payment-logo">
+        <span>Gopay</span>
+      </div>
+      <button class="copy-button" data-account="085668739544">Copy</button>
+    </div>
+
+    <div class="payment-method">
+      <div class="payment-left">
+        <img src="https://i.top4top.io/p_34253rxfk1.jpg" alt="Ovo" class="payment-logo">
+        <span>Ovo</span>
+      </div>
+      <button class="copy-button" data-account="Belom Tersedia">Copy</button>
+    </div>
+
+    <div class="footer">© Dyy - OffiCial </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.copy-button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const account = button.getAttribute('data-account');
+        navigator.clipboard.writeText(account).then(() => {
+          button.textContent = 'Copied!';
+          setTimeout(() => button.textContent = 'Copy', 1000);
+        });
+      });
+    });
+
+    function toggleQRIS() {
+      const qrisImg = document.getElementById('qrisImage');
+      qrisImg.style.display = qrisImg.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
